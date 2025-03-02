@@ -3,7 +3,7 @@ id: open-webui
 name: Open WebUI
 tagline: Chat with Ollama models like DeepSeek-R1 and LLama, or use an OpenAI API key
 category: ai
-version: "0.5.10"
+version: "0.5.16"
 port: 2876
 description: >-
   Open WebUI lets you chat with advanced AI models running locally on your own device or connect to online models using an API key.
@@ -37,17 +37,21 @@ defaultPassword: ""
 dependencies:
   - ollama
 releaseNotes: >-
-  This update includes several new features, improvements and bug fixes:
-    - Added Code Interpreter for real-time code execution for smoother, dynamic results.
-    - Updated the chat interface for a simpler, more intuitive experience.
-    - Introduced an experimental feature for quicker, smarter tool responses.
-    - Added a new search option and always-on web search for up-to-date info.
-    - Improved local date/time displays and overall performance.
-    - Enhanced security for external connections and fixed login and upload issues.
-    - System prompts now work correctly when used through the API
-    - Fixed an issue with the 'thinking' tag display
-    - Improved stability of the Code Interpreter when using custom functions
+  ⚠️ If you encounter errors when chatting with your existing ollama models after this update, please clear your browser cache to resolve.
+  This is a known issue with ollama and open-webui that may occur after updating.
 
+
+  Highlights:
+    - 📄 Full Context Mode for Local Document Search (RAG): Toggle full context mode from Admin Settings > Documents to inject entire document content into context, improving accuracy for models with large context windows—ideal for deep context understanding.
+    - 🌍 Smarter Web Search with Agentic Workflows: Web searches now intelligently gather and refine multiple relevant terms, similar to RAG handling, delivering significantly better search results for more accurate information retrieval.
+    - 🔎 Experimental Playwright Support for Web Loader: Web content retrieval is taken to the next level with Playwright-powered scraping for enhanced accuracy in extracted web data.
+    - ☁️ Experimental Azure Storage Provider: Early-stage support for Azure Storage allows more cloud storage flexibility directly within Open WebUI.
+    - 📊 Improved Jupyter Code Execution with Plots: Interactive coding now properly displays inline plots, making data visualization more seamless inside chat interactions.
+    - ⏳ Adjustable Execution Timeout for Jupyter Interpreter: Customize execution timeout (default: 60s) for Jupyter-based code execution, allowing longer or more constrained execution based on your needs.
+    - ▶️ "Running..." Indicator for Jupyter Code Execution: A visual indicator now appears while code execution is in progress, providing real-time status updates on ongoing computations.
+    - ⚙️ General Backend & Frontend Stability Enhancements: Extensive refactoring improves reliability, performance, and overall user experience for a more seamless Open WebUI.
+    - 🌍 Translation Updates: Various international translation refinements ensure better localization and a more natural user interface experience.
+    - 🐞 Various bug fixes and improvements.
 
   Full release notes can be found at https://github.com/open-webui/open-webui/releases
 path: ""
